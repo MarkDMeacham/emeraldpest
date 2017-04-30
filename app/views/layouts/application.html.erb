@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emerald Pest Control</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta name="author" content="Mark Meacham" />
+  <meta name="keywords" content="pest control saint george" />
+  <meta name="description" content="Full service pest control in Saint George." />
+  <%= favicon_link_tag "favicon.png", type: "image/png" %>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+<%= render "/layouts/header" %>
+<%= yield %>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<div class="container-fluid" id="carousel-wrapper">
+  <div class="row">
+    <div class="col-sm-6 col-xs-6 divider"><div class="divider-bg green-bg"></div></div>
+    <div class="col-sm-6 col-xs-6 divider"><div class="divider-bg dark-green-bg"></div></div>
+  </div>
+  <div class="row">
+    <div id="slider" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselIndicator" data-slide-to="0" class="active"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag "emerald_pest_control_truck.jpg", alt: "Emerald Pest Control Truck", class: 'd-block' %>
+        </div>
+      </div>
+      <a class="carousel-control left" href="#slider" role="button" data-slide="prev">
+        <%= content_tag :span, nil, class: "glyphicon glyphicon-chevron-left", "aria-hidden" => true %>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control right" href="#slider" role="button" data-slide="next">
+        <%= content_tag :span, nil, class: "glyphicon glyphicon-chevron-right", "aria-hidden" => true %>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-xs-6 divider"><div class="divider-bg green-bg"></div></div>
+    <div class="col-sm-6 col-xs-6 divider"><div class="divider-bg dark-green-bg"></div></div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+      <h1>Emerald Pest Control</h1>
+      <p>We use only the highest quality products available on the market and apply them with state of the art equipment. We provide a 3-point barrier around your home treating 3 feet up and 3 feet out, keeping pests not only out of your home but AWAY from it. We don't cut corners. No diluting. No cheap product. </p>
+      <div class='row'>
+        <div class="col-lg-4 col-lg-4 col-sm-4 col-xs-12">
+          <h2>Safe</h2>
+          Everything we apply to your home is organically derived and safe for your family and pets.
+        </div>
+        <div class="col-lg-4 col-lg-4 col-sm-4 col-xs-12">
+          <h2>Effective</h2>
+          Only the highest quality product applied with the proper equipment gets the job done right.
+        </div>
+        <div class="col-lg-4 col-lg-4 col-sm-4 col-xs-12">
+          <h2>Resistant</h2>
+          Our product is time-released so it wont wear off or become less-effective due to heat or rain.
+        </div>
+      </div>
+      <%= link_to content_tag(:span, "Click here to request a free quote!", class: "btn btn-primary btn-big", style: "margin-top: 25px;"), new_quote_path %>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+      <div id="insects_wrapper">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><%= image_tag "ant.png", alt: "Kill Ants" %> Ants</div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><%= image_tag "beetle.png", alt: "Kill Beetles" %> Beetles</div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><%= image_tag "cockroach.png", alt: "Kill Cockroaches" %> Cockroaches</div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><%= image_tag "cricket.png", alt: "Kill Crickets" %> Crickets</div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><%= image_tag "rodent.png", alt: "Kill Rodents" %> Rodents</div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><%= image_tag "scorpion.png", alt: "Kill Scorpions" %> Scorpions</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="parallax de-web">
+</div>
+
+<div class="container" id="services" style="margin-top: 25px;">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service">
+      <h4>Power-Spray</h4>
+      <p>By applying our product to the exterior of your home using our premium power-spray equipment we are able to not only treat the pests you see, but the ones you don’t. The micro-encapsulated product is time released and soaks into the ground and reaches pests where they live and breed, killing off the nests completely and preventing them from relocating. </p>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 service hidden-xs service-header">
+      <h1>Protect your home</h1>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service">
+      <h4>Granules</h4>
+      <p>By applying granules to the yard, we are able to treat the pests that are not only nesting around the base of your home, but actually IN the grass and yard. We granulate up to 20 feet around the home at EVERY SERVICE using our premium waterproof and SAFE granules. </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service">
+      <h4>Dust Injections</h4>
+      <p>Many pests including scorpions and black widows nest inside walls both inside and outside the home where its cool in the summer and warm in the winter. Instead of leaving these unseen  dangerous pests alone, we provide an extra service that specifically targets these areas. Our dust quickly spreads to even the smallest spaces inside block walls and power outlets where liquid product can’t, killing any unwanted pests and preventing them from returning. </p>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service">
+      <h4>360 Interior + garage</h4>
+      <p>At Emerald, family and safety are our top priorities. We use only the safest product inside the home, not the cheapest. We mix our product with exact measurements and do not dilute it - keeping your family and pets SAFE and your home PEST FREE. Our interior service treats with pin point accuracy 360 around the entire interior of the home AND garage. </p>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service">
+      <h4>De-Web</h4>
+      <p>While treating pests in and around the home is key, we also treat pests living ON your home. At every service we provide FREE web and nest knockdown around the highest and lowest points of the home. These nests and webs often times contain pests hiding and egg sacks that haven't yet hatched. Our equipment can reach up to 3-stories high so that we can ensure the removal of all webs and nests. </p>
+    </div>
+  </div>
+</div>
+<div class="container" id="emerald-promise-wrapper" style="text-align: center;">
+  <h3>If at any time you find an unwanted pest in or around your home, we will be out immediately FREE OF CHARGE to remove them, inspect the home, and provide an extra barrier.</h3>
+  <h3 style="margin-top: 15px;">That's the Emerald Promise.</h3>
+</div>

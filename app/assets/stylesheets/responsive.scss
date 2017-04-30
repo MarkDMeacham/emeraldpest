@@ -1,0 +1,19 @@
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px){
+  .nav-wrapper{background-size: 150%; background-position: -70px 5%;}
+  .parallax {background-attachment: scroll;}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px){
+  .nav-wrapper{background-size: 100%; background-position: 100px 10%;}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}

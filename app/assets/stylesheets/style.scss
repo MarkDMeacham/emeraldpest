@@ -1,0 +1,105 @@
+@import "theme";
+
+html, body{height: 100%;}
+
+body{
+  background-image: image-url("web2.png"); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; 
+  background-position: left center; line-height: 1.5em;
+}
+@font-face{
+  font-family: 'Corbel';
+  src: font-url('corbel.ttf') format('truetype');
+} 
+
+@font-face{
+  font-family: 'Josefin';
+  src: font-url('JosefinSans-Bold.ttf') format('truetype');
+} 
+
+a{text-decoration: underline;}
+nav{
+  width: 100%;
+  .nav-wrapper{
+    padding: 25px 0 25px; box-sizing: border-box; font-family: Corbel; background-repeat: no-repeat;
+
+    #logo{margin-bottom: 10px; max-height: 50px;}
+
+    .menu {
+      text-align: right;
+      a, span{margin: 0 15px; text-decoration: none;}
+      span{margin-right: 0;}
+    }
+
+    .navbar-collapse {
+      text-align: center; border-top: none; box-shadow: none;
+      a{padding: 5px; display: block; text-decoration: none;}
+    }
+
+    .navbar-collapse-container{
+      text-align: right; color: #FFF; font-size: 20px;
+      .glyphicon{border: 1px solid #FFF; padding: 2px; border-radius: 4px;}
+    }
+
+    .social-media-container{margin-bottom: 10px;}
+  }
+}
+
+#carousel-wrapper{
+  padding: none;
+  #slider{
+    height: 400px; background-color: #FFF; position: relative; overflow: hidden; text-align: center;
+    img{min-width: 815px;}
+    .carousel-control{background-image: none; width: 30px;}
+    .carousel-indicators{
+      bottom: 0;
+      li{border-radius: 0; height: 5px; width: 25px;}
+    }
+  }
+}
+
+#emerald-promise-wrapper{
+  padding: 50px; margin-bottom: 25px; margin-top: 25px;
+  h2{margin-top: 0; margin-bottom: 25px; font-weight: bold;}
+  h3, p{margin: 0;}
+}
+
+.service-header{
+  text-align: center;
+  h1{background-color: $link-color; padding: 20px; margin: 0;}
+}
+
+#insects_wrapper{
+  margin-top: 15px; font-size: 36px;
+  img{max-width: 35px;}
+  div{padding: 10px;}
+  div:nth-child(odd){background-color: rgba(50, 50, 50, 0.4);}
+  div:nth-child(even){background-color: rgba(10, 10, 10, 0.4);}
+}
+
+.number{font-family: sans-serif;}
+
+.box{background-color: rgba(34, 34, 34, 1); border-radius: 4px; box-shadow: 0 0 5px #111;}
+
+.row .divider{padding: 0;}
+.green-bg{background-color: $green;}
+.dark-green-bg{background-color: $dark-green;}
+.divider-bg{height: 5px;}
+
+.btn-big{font-size: 24pt; text-align: center; width: 100%;}
+
+.main-content{height: 100%;}
+.parallax { 
+  /* Set a specific height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax.de-web{background-image: url("de-web.jpg");}
+.parallax.de-web{background-image: url("granules.jpg");}
+.parallax.de-web{background-image: url("power-spray.jpg");}
+.parallax.de-web{background-image: url("dust-injection.jpg");}
