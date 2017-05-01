@@ -97,9 +97,20 @@ nav{
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+
+  .caption{
+    position: absolute; left: 0; top: 50%; width: 100%; text-align: center;
+    .border{background-color: #232323; color: #FFF; padding: 25px 50px; font-size: 25px; display: inline-block;}
+  }
 }
+
 
 .parallax.de-web{background-image: url("de-web.jpg");}
 .parallax.granules{background-image: url("granules.jpg");}
 .parallax.power-spray{background-image: url("power-spray.jpg");}
 .parallax.dust-injection{background-image: url("dust-injection.jpg");}
+
+.description{padding-top: 25px; padding-bottom: 25px;}
+
+#footer{text-align: center; padding: 25px; background-color: $link-color; a{color: #FFF;}}

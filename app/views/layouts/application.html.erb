@@ -8,12 +8,15 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0" />
   <meta name="author" content="Mark Meacham" />
   <meta name="keywords" content="pest control saint george" />
-  <meta name="description" content="Full service pest control in Saint George." />
+  <meta name="description" content="What's lurking in YOUR walls? Get rid of unwanted pests with the best pest control in Southern Utah." />
   <%= favicon_link_tag "favicon.png", type: "image/png" %>
   <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 <%= render "/layouts/header" %>
 <%= yield %>
+<div id="footer">
+  Emerald Pest Control - Call us today at <span class="number">435.619.1633</span> or <%= link_to "Click here to request a quote!", new_quote_path %>
+</div>
 </body>
 </html>
