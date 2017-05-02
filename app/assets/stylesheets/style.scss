@@ -47,7 +47,7 @@ nav{
 #carousel-wrapper{
   padding: none;
   #slider{
-    height: 400px; background-color: #FFF; position: relative; overflow: hidden; text-align: center;
+    height: 550px; background-color: #FFF; position: relative; overflow: hidden; text-align: center;
     img{min-width: 815px;}
     .carousel-control{background-image: none; width: 30px;}
     .carousel-indicators{
@@ -110,6 +110,7 @@ nav{
 .parallax.granules{background-image: url("granules.jpg");}
 .parallax.power-spray{background-image: url("power-spray.jpg");}
 .parallax.dust-injection{background-image: url("dust-injection.jpg");}
+.parallax.house{background-image: url("house.jpg");}
 
 .description{padding-top: 25px; padding-bottom: 25px;}
 
