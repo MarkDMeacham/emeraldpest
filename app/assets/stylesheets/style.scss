@@ -4,8 +4,9 @@ html, body{height: 100%;}
 
 body{
   background-image: image-url("web2.png"); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; 
-  background-position: left center; line-height: 1.5em;
+  background-position: left center;
 }
+body, h1, h2, h3, h4, h5, h6{line-height: 1.5em;}
 @font-face{
   font-family: 'Corbel';
   src: font-url('corbel.ttf') format('truetype');
@@ -47,8 +48,7 @@ nav{
 #carousel-wrapper{
   padding: none;
   #slider{
-    height: 550px; background-color: #FFF; position: relative; overflow: hidden; text-align: center;
-    img{min-width: 815px;}
+    background-color: #FFF; position: relative; overflow: hidden; text-align: center;
     .carousel-control{background-image: none; width: 30px;}
     .carousel-indicators{
       bottom: 0;
@@ -69,7 +69,7 @@ nav{
 }
 
 #insects_wrapper{
-  margin-top: 15px; font-size: 36px;
+  margin-top: 15px;
   img{max-width: 35px;}
   div{padding: 10px;}
   div:nth-child(odd){background-color: rgba(50, 50, 50, 0.4);}
@@ -111,7 +111,8 @@ nav{
 .parallax.power-spray{background-image: image-url("power-spray.jpg");}
 .parallax.dust-injection{background-image: image-url("dust-injection.jpg");}
 .parallax.house{background-image: image-url("house.jpg");}
+.parallax.emerald-promise{background-image: image-url("spider-web.jpg");}
 
 .description{padding-top: 25px; padding-bottom: 25px;}
 
-#footer{text-align: center; padding: 25px; background-color: $link-color; a{color: #FFF;}}
+footer{text-align: center; padding: 25px; background-color: $link-color; a{color: #FFF;}}

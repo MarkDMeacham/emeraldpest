@@ -2,6 +2,8 @@
 @media (max-width: 767px){
   .nav-wrapper{background-size: 150%; background-position: -70px 5%;}
   .parallax {background-attachment: scroll;}
+  #insects_wrapper{font-size: 36px;}
+  .btn-big{font-size: 24px;}
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -9,8 +11,13 @@
   .nav-wrapper{background-size: 100%; background-position: 100px 10%;}
 }
 
+@media (min-width: 768px) and (max-width: 991px){
+  #insects_wrapper{font-size: 24px;}
+}
+
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992) {
+@media (min-width: 992px) {
+  #insects_wrapper{font-size: 36px;}
 }
 
 /* Large devices (large desktops, 1200px and up) */
