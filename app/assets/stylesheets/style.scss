@@ -21,9 +21,9 @@ a{text-decoration: underline;}
 nav{
   width: 100%;
   .nav-wrapper{
-    padding: 25px 0 25px; box-sizing: border-box; font-family: Corbel; background-repeat: no-repeat;
+    padding: 25px 0 0; box-sizing: border-box; font-family: Corbel; background-repeat: no-repeat;
 
-    #logo{margin-bottom: 10px; max-height: 50px;}
+    #logo{max-height: 50px; margin: 0 auto 25px;}
 
     .menu {
       text-align: right;
@@ -31,17 +31,17 @@ nav{
       span{margin-right: 0;}
     }
 
+    .social-media-container{margin-bottom: 10px;}
+
     .navbar-collapse {
       text-align: center; border-top: none; box-shadow: none;
-      a{padding: 5px; display: block; text-decoration: none;}
+      a, span, .social-media-container{margin: 15px 0; display: block; text-decoration: none;}
     }
 
     .navbar-collapse-container{
       text-align: right; color: #FFF; font-size: 20px;
-      .glyphicon{border: 1px solid #FFF; padding: 2px; border-radius: 4px;}
+      .glyphicon {cursor: pointer; position: absolute; right: 15px; padding: 10px; border: 1px solid transparent; z-index: 10;}
     }
-
-    .social-media-container{margin-bottom: 10px;}
   }
 }
 
