@@ -3,6 +3,6 @@ class QuotesController < ApplicationController
   end
 
   def create
-    RequestMailer.quote(params).delivery_now
+    RequestMailer.quote(params).deliver_now
   end
 end
