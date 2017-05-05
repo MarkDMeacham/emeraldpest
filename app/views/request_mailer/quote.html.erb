@@ -1,0 +1,29 @@
+<h1>Request for Quote</h1>
+<table>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td><%= @request[:name] %></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><%= @request[:email] %></td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td><%= @request[:phone] %></td>
+    </tr>
+    <% if @request[:address].present? %>
+      <tr>
+        <td>Address</td>
+        <td><%= @request[:address] %></td>
+      </tr>
+    <% end %>
+    <% if @request[:notes].present? %>
+      <tr>
+        <td>Notes</td>
+        <td><%= @request[:notes] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,9 +1,8 @@
 class QuotesController < ApplicationController
   def new
-    logger.debug "let's create a new quote"
   end
 
   def create
-    logger.debug "you created a quote!"
+    RequestMailer.quote(params).delivery_now
   end
 end

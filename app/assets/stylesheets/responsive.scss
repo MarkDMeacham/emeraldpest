@@ -1,7 +1,7 @@
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px){
   .nav-wrapper{background-size: 150%; background-position: -70px 5%;}
-  .parallax {background-attachment: scroll;}
+  body, .parallax {background-attachment: scroll;}
   #insects_wrapper{font-size: 36px;}
   .btn-big{font-size: 20px;}
 }
