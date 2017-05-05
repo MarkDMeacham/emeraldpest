@@ -24,7 +24,7 @@ nav{
   .nav-wrapper{
     padding: 25px 0 0; box-sizing: border-box; font-family: Corbel; background-repeat: no-repeat;
 
-    #logo{max-height: 50px; margin: 0 auto 25px;}
+    #logo{max-height: 50px; margin-bottom: 25px;}
 
     .menu {
       text-align: right;
@@ -53,7 +53,7 @@ nav{
     .carousel-control{background-image: none; width: 30px;}
     .carousel-indicators{
       bottom: 0;
-      li{border-radius: 0; height: 5px; width: 25px;}
+      li{margin: 0 10px 0;}
     }
   }
 }
