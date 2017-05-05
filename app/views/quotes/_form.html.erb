@@ -1,27 +1,28 @@
-<%= form_tag quotes_path, remote: true, style: "margin-bottom: 25px;" do %>
-  <h2>Request a Quote</h2>
+<%= form_for @quote, style: "margin-bottom: 25px;" do |f| %>
+  <h1>Request a Quote</h1>
   <div class="form-group">
     <%= label_tag :name, "Name (required)" %>
-    <%= text_field_tag :name, nil, placeholder: "Name", class: "form-control" %>
+    <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
   </div>
   <div class="form-group">
     <%= label_tag :email, "Email (required)" %>
-    <%= text_field_tag :email, nil, placeholder: "Email", class: "form-control" %>
+    <%= f.text_field :email, placeholder: "Email", class: "form-control" %>
   </div>
   <div class="form-group">
     <%= label_tag :phone, "Phone (required)" %>
-    <%= text_field_tag :phone, nil, placeholder: "Phone", class: "form-control" %>
+    <%= f.text_field :phone, placeholder: "Phone", class: "form-control" %>
   </div>
   <div class="form-group">
     <%= label_tag :address, "Address" %>
-    <%= text_field_tag :address, nil, placeholder: "Address, City, State, Zip", class: "form-control" %>
+    <%= f.text_field :address, placeholder: "Address, City, State, Zip", class: "form-control" %>
   </div>
   <div class="form-group">
     <%= label_tag :notes, "Notes" %>
-    <%= text_area_tag :notes, nil, placeholder: "Additional Notes (Optional)", class: "form-control" %>
+    <%= f.text_area :notes, placeholder: "Additional Notes (Optional)", class: "form-control" %>
   </div>
   <div class="form-group">
-    <div class="g-recaptcha" data-sitekey="6LcoUR4UAAAAADkmyplKx1WCCuxFHvGgtwOxNq80"></div>
+    <%= label_tag :verification, "What gem is our company named after?" %>
+    <%= text_field_tag :verification, nil, class: "form-control", placeholder: "Hint: It's in the name." %>
   </div>
   <div class="form-group">
     <%= submit_tag "Send", class: "btn btn-primary" %>

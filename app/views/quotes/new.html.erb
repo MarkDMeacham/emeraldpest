@@ -1,5 +1,13 @@
-<div class="container" id="contact">
+<div class="container" id="request_a_quote">
   <div class="col-sm-8 col-sm-offset-2 col-xs-12 box">
+    <% if @quote.errors.any? %>
+      <div class="alert alert-danger">
+        <strong>Error!</strong> Could not request quote.
+        <% @quote.errors.full_messages.each do |error| %>
+          <div><%= error %></div>
+        <% end %>
+      </div>
+    <% end %>
     <%= render "/quotes/form" %>
   </div>
 </div>

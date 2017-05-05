@@ -4,7 +4,7 @@ html, body{height: 100%;}
 
 body{
   background-image: image-url("web2.png"); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; 
-  background-position: left center;
+  background-position: left top;
 }
 body, h1, h2, h3, h4, h5, h6{line-height: 1.5em;}
 @font-face{
@@ -18,6 +18,7 @@ body, h1, h2, h3, h4, h5, h6{line-height: 1.5em;}
 } 
 
 a{text-decoration: underline;}
+input[type=text], select, textarea{font-family: Helvetica, Arial, sans-serif;}
 nav{
   width: 100%;
   .nav-wrapper{
@@ -78,7 +79,11 @@ nav{
 
 .number{font-family: sans-serif;}
 
-.box{background-color: rgba(34, 34, 34, 1); border-radius: 4px; box-shadow: 0 0 5px #111;}
+.box{
+  background-color: rgba(34, 34, 34, 1); border-radius: 4px; 
+  box-shadow: 0 0 5px #111; padding-top: 25px; padding-bottom: 25px; margin-bottom: 25px;
+  h1{margin-top: 0;}
+}
 
 .row .divider{padding: 0;}
 .green-bg{background-color: $green;}
@@ -116,3 +121,7 @@ nav{
 .description{padding-top: 25px; padding-bottom: 25px;}
 
 footer{text-align: center; padding: 25px; background-color: $link-color; a{color: #FFF;}}
+
+.field_with_errors{
+  input[type=text], select, textarea{border: 2px solid $state-danger-border; font-color: $state-danger-text;}
+}
