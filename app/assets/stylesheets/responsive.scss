@@ -1,3 +1,21 @@
+@media (max-width: 455px){
+  #slider{
+    #truck img{left: -75%}
+    #bug-spray img{left: -30%}
+    #back-of-truck img{left: -75%}
+    #owner img{left: -75%}
+  }
+}
+
+@media (min-width: 456px) and (max-width: 620px){
+  #slider{
+    #truck img{left: -30%}
+    #bug-spray img{left: -30%}
+    #back-of-truck img{left: -30%}
+    #owner img{left: -30%}
+  }
+}
+
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px){
   .nav-wrapper{background-size: 150%; background-position: -70px 5%;}
@@ -5,14 +23,9 @@
   #insects_wrapper{font-size: 36px;}
   .btn-big{font-size: 20px;}
   #logo{margin: 0 auto 25px;}
-
   #slider{
     height: 400px;
     img{height: 400px; max-width: none; position: relative;}
-    #truck img{left: -75%}
-    #bug-spray img{left: -30%}
-    #back-of-truck img{left: -75%}
-    #owner img{left: -75%}
   }
 }
 
@@ -28,6 +41,7 @@
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   #insects_wrapper{font-size: 36px;}
+  .description{font-size: 18px; line-height: 1.5em;}
 }
 
 /* Large devices (large desktops, 1200px and up) */
