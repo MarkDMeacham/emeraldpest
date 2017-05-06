@@ -33,7 +33,10 @@ nav{
       span{margin-right: 0;}
     }
 
-    .social-media-container{margin-bottom: 10px;}
+    .social-media-container{
+      margin-bottom: 10px;
+      img{width: 24px;}
+    }
 
     .navbar-collapse {
       text-align: center; border-top: none; box-shadow: none;
