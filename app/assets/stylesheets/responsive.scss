@@ -6,7 +6,14 @@
   .btn-big{font-size: 20px;}
   #logo{margin: 0 auto 25px;}
 
-  
+  #slider{
+    height: 400px;
+    img{height: 400px; max-width: none; position: relative;}
+    #truck img{left: -75%}
+    #bug-spray img{left: -30%}
+    #back-of-truck img{left: -75%}
+    #owner img{left: -75%}
+  }
 }
 
 /* Small devices (tablets, 768px and up) */
