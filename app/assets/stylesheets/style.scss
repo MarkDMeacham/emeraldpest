@@ -110,7 +110,10 @@ nav{
 
   .caption{
     position: absolute; left: 0; top: 50%; width: 100%; text-align: center;
-    .border{background-color: #232323; color: #FFF; padding: 25px 50px; font-size: 25px; display: inline-block;}
+    .border{
+      background-color: #232323; color: #FFF; padding: 25px 50px; display: inline-block;
+      h2{margin: 0; font-size: 25px;}
+    }
   }
 }
 
