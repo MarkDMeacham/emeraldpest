@@ -21,7 +21,7 @@
     <%= f.text_area :notes, placeholder: "Additional Notes (Optional)", class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= label_tag :verification, "What gem is our company named after?" %>
+    <%= label_tag :verification, "To prove you are not a robot... <br /> What gem is our company named after?".html_safe %>
     <%= text_field_tag :verification, nil, class: "form-control", placeholder: "Hint: It's in the name." %>
   </div>
   <div class="form-group">
