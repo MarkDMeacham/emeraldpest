@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6, .btn, #insects_wrapper, .caption, footer{font-family: Co
   src: font-url('JosefinSans-Bold.ttf') format('truetype');
 } 
 
-a{text-decoration: underline;}
+a:not(.glyphicon){text-decoration: underline;}
 input[type=text], select, textarea{font-family: Helvetica, Arial, sans-serif;}
 nav{
   width: 100%;
@@ -82,6 +82,7 @@ nav{
 }
 
 .number{font-family: sans-serif;}
+a.btn{text-decoration: none;}
 
 .box{
   background-color: rgba(34, 34, 34, 1); border-radius: 4px; 
@@ -131,4 +132,13 @@ footer{text-align: center; padding: 25px; background-color: $link-color; a{color
 
 .field_with_errors{
   input[type=text], select, textarea{border: 2px solid $state-danger-border; font-color: $state-danger-text;}
+}
+
+.comment{font-size: 75%; font-style: italic;}
+.elevate-z-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+.actions{
+  margin: 16px 0;
+  .btn, a {margin-right: 16px;}
 }

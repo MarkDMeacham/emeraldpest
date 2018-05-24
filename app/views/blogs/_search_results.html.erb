@@ -1,0 +1,10 @@
+<% @blogs.each_with_index do |blog, index| %>
+  <div class="blog-preview">
+    <%= link_to content_tag(:h2, blog.title), blog_path(blog.slug) %>
+    <p><%= strip_tags(blog.text) %></p>
+    <p class="comment">Added <%= blog.created_at.strftime("%-m/%-d/%Y") %></p>
+  </div>
+  <% if index < @blogs.size - 1 %>
+    <hr>
+  <% end %>
+<% end %>

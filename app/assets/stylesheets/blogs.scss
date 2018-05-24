@@ -1,0 +1,21 @@
+// Place all the styles related to the Blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "theme";
+
+.blog-preview{
+  h1, h2, h3, h4, h5, h6, div, p{
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  a {text-decoration: none;}
+  a:hover {text-decoration: underline;}
+}
+
+.blog{
+  background-color: rgba(255, 255, 255, 0.85);
+  color: $body-bg;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  h1, h2, h3, h4, h5, h6 {margin-top: 0;}
+}

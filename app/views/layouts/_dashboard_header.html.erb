@@ -1,0 +1,36 @@
+<nav>
+  <div class="nav-wrapper">
+    <div id="top">
+      <div class="container hidden-xs">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <%= render "/layouts/logo" %>
+          </div>
+          <div class="col-lg-9 col-md-9 col-sm-9 menu">
+            <div class="menu_wrapper">
+              Welcome back, <%= current_user.name %> <%= link_to "Logout", '/logout' %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- XS -->
+      <div class="container visible-xs-block">
+        <div class="row">
+          <div class="col-xs-2"></div>
+          <div class="col-xs-8" style="text-align: center;">
+            <%= render "/layouts/logo" %>
+          </div>
+          <div class="col-xs-2 navbar-collapse-container">
+            <%= content_tag :span, nil, class: "glyphicon glyphicon-menu-hamburger", data: {toggle: "collapse", target: "#collapse-menu"}, aria: {expanded: false} %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="visible-xs-block">
+      <div class="collapse navbar-collapse" id="collapse-menu">
+        <%= link_to "Logout", '/logout' %>
+      </div>
+    </div>
+  </div>
+</nav>
