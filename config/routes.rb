@@ -9,7 +9,12 @@ Rails.application.routes.draw do
     end
   end
   get "/blogs/:id(.format)" => "blogs#show"
-  resources :reviews, except: [:edit]
+
+  resources :reviews, except: [:show] do 
+    collection do 
+      get :search
+    end
+  end
   
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

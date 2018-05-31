@@ -1,19 +1,21 @@
-<% if current_user %>
-  <div style="margin-bottom: 24px;">
-    <%= link_to 'Create Blog', new_blog_path, class: "btn btn-primary" %>
-  </div>
-<% end %>
-<%= form_tag search_blogs_path, remote: true, method: :get do %>
-  <div class="form-group">
-    <%= label_tag :term, 'Search Blogs', class: "control-label" %>
-    <div class="input-group">
-      <%= text_field_tag :term, params[:term], class: "form-control" %>
-      <span class="input-group-btn">
-        <%= button_tag content_tag(:span, nil, class: "glyphicon glyphicon-search"), class: "btn btn-primary", type: :submit %>
-      </span>
+<div class="container">
+  <% if current_user %>
+    <div style="margin-bottom: 24px;">
+      <%= link_to 'Create Blog', new_blog_path, class: "btn btn-primary" %>
     </div>
+  <% end %>
+  <%= form_tag search_blogs_path, remote: true, method: :get do %>
+    <div class="form-group">
+      <%= label_tag :term, 'Search Blogs', class: "control-label" %>
+      <div class="input-group">
+        <%= text_field_tag :term, params[:term], class: "form-control" %>
+        <span class="input-group-btn">
+          <%= button_tag content_tag(:span, nil, class: "glyphicon glyphicon-search"), class: "btn btn-primary", type: :submit %>
+        </span>
+      </div>
+    </div>
+  <% end %>
+  <div id="search_results">
+    <%= render "blogs/search_results" %>
   </div>
-<% end %>
-<div id="search_results">
-  <%= render "blogs/search_results" %>
 </div>

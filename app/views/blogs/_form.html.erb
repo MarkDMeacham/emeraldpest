@@ -19,6 +19,10 @@
   </div>
   <%= tinymce %>
   <div class="form-group">
+    <%= f.label :tags, 'Tags', class: "control-label" %>
+    <%= f.text_field :tags, class: "form-control" %>
+  </div>
+  <div class="form-group">
     <%= submit_tag :Save, class: "btn btn-primary", style: "width: 100%;" %>
   </div>
 <% end %>

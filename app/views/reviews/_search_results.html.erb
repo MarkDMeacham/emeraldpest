@@ -1,0 +1,10 @@
+<% @reviews.each_with_index do |review, index| %>
+  <div class="review-preview">
+    <%= link_to content_tag(:h2, review.name), edit_review_path(review.id) %>
+    <p><%= strip_tags(review.text) %></p>
+    <p class="comment">Added <%= review.created_at.strftime("%-m/%-d/%Y") %></p>
+  </div>
+  <% if index < @reviews.size - 1 %>
+    <hr>
+  <% end %>
+<% end %>

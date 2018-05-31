@@ -1,20 +1,13 @@
 class BlogsController < ApplicationController
-  before_filter :authenticate, except: [:index, :show]
+  before_filter :authenticate, except: [:index, :search, :show]
   layout :get_layout
 
   def index
-    @blogs = Blog.reorder(id: :desc)
+    @blogs = Blog.search(params)
   end
 
   def search
-    term = "%#{params[:term].to_s.as_search_param}"
-    query = Blog.reorder(id: :desc)
-
-    if params[:term].present?
-      query = query.where("title LIKE :term OR text LIKE :term", term: term)
-    end
-
-    @blogs = query
+    @blogs = Blog.search(params)
   end
 
   def new
@@ -38,7 +31,7 @@ class BlogsController < ApplicationController
     @blog = Blog.find(params[:id])
     @blog.update_attributes(update_params)
     unless @blog.valid?
-      redirect_to edit_blog_path(@blog), flash: {alert: @blog.errors.full_messages}
+      render 'edit'
       return
     end
     redirect_to blog_path(@blog.slug)
@@ -52,7 +45,7 @@ class BlogsController < ApplicationController
     @blog = Blog.find(params[:id])
     @blog.destroy
     unless @blog.valid?
-      redirect_to blog_path(@blog.slug)
+      render 'show'
       return
     end
     redirect_to blogs_path, flash: {notice: "Blog destroyed"}
@@ -63,19 +56,15 @@ class BlogsController < ApplicationController
     @blog = Blog.find params[:id]
   end
 
-  def get_layout
-    current_user ? 'dashboard' : 'application'
-  end
-
   def new_params
-    params.require(:blog).permit(:title, :text)
+    params.require(:blog).permit(:title, :text, :tags)
   end
 
   def create_params
-    params.require(:blog).permit(:title, :text).merge(creator_id: current_user.id, updator_id: current_user.id)
+    params.require(:blog).permit(:title, :text, :tags).merge(creator_id: current_user.id, updator_id: current_user.id)
   end
 
   def update_params
-    params.require(:blog).permit(:title, :text).merge(updator_id: current_user.id)
+    params.require(:blog).permit(:title, :text, :tags).merge(updator_id: current_user.id)
   end
 end

@@ -12,10 +12,18 @@
 }
 
 .blog{
-  background-color: rgba(255, 255, 255, 0.85);
-  color: $body-bg;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: $text-color;
   padding: 16px;
   border-radius: 4px;
   margin-bottom: 24px;
   h1, h2, h3, h4, h5, h6 {margin-top: 0;}
+
+  .blog-title{margin-bottom: 0px;}
+  .blog-date{margin-top: 0px;}
+  .blog-body{margin: 24px 0;}
+  .tags-container{
+    display: flex; font-size: 75%; align-items: center;
+    .btn{margin: 0 5px; font-size: 10pt; padding: 2px 5px;}
+  }
 }

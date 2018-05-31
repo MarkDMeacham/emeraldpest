@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6, .btn, #insects_wrapper, .caption, footer{font-family: Co
 } 
 
 a:not(.glyphicon){text-decoration: underline;}
+
 input[type=text], select, textarea{font-family: Helvetica, Arial, sans-serif;}
 nav{
   width: 100%;
@@ -29,7 +30,7 @@ nav{
 
     .menu {
       text-align: right;
-      a{margin: 0 15px; text-decoration: none;}
+      a{margin: 0 15px 0 0; text-decoration: none;}
       span{margin-right: 0;}
     }
 
@@ -60,6 +61,12 @@ nav{
       li{margin: 0 10px 0;}
     }
   }
+}
+
+#review-slider{
+  margin: 24px 0 0; background: rgba(10, 10, 10, 0.4);
+  .carousel-text{margin: auto; padding: 24px calc(24px + 30px);}
+  .carousel-control{background-image: none; width: 30px;}
 }
 
 #emerald-promise-wrapper{

@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
   def authenticate
     redirect_to '/login' unless current_user
   end
+
+  def get_layout
+    current_user ? 'dashboard' : 'application'
+  end
 end

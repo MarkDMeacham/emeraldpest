@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <% if @blog %>
+  <title><%= @blog.title %></title>
+  <meta name="description" content="<%= truncate(strip_tags(@blog.text), length: 100) %>" />
+  <meta name="keywords" content="<%= @blog.tags %>" />
+  <% else %>
   <title>Emerald Pest Control</title>
+  <meta name="keywords" content="emerald pest control, pest control saint george, kill bugs" />
+  <meta name="description" content="What's lurking in YOUR walls? Get rid of unwanted pests with the Emerald Pest Control, the best  in Saint George, Utah." />
+  <% end %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag 'blogs' if params[:controller] == 'blogs' %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0" />
   <meta name="author" content="Mark Meacham" />
-  <meta name="keywords" content="emerald pest control, pest control saint george, kill bugs" />
-  <meta name="description" content="What's lurking in YOUR walls? Get rid of unwanted pests with the Emerald Pest Control, the best  in Saint George, Utah." />
   <%= favicon_link_tag "favicon.png", type: "image/png" %>
   <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
