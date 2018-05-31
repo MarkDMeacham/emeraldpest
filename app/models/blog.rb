@@ -4,7 +4,7 @@ class Blog < ActiveRecord::Base
 
   validates :title, :text, :creator, :updator, :slug, presence: true
   validates :slug, uniqueness: true
-  before_validation -> {self.slug = self.title&.downcase.gsub(' ', '-').gsub(/[^\w\-]/, '')}
+  before_validation -> {self.slug = (self.title || '').downcase.gsub(' ', '-').gsub(/[^\w\-]/, '')}
 
   def self.find_by_slug(slug)
     find_by(slug: slug)
